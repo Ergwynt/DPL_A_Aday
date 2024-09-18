@@ -93,20 +93,35 @@ Y verificamos que ha sido creado con un ls
 
 Para crear el tag primero haremos un git status para comprobar que no haya cambios sin confirmar.
 
-    On branch main
-    Your branch is up to date with 'origin/main'.
+Para saber si todo esta correcto debe dar este mensaje:
 
-    Changes not staged for commit:
-    (use "git add <file>..." to update what will be committed)
-    (use "git restore <file>..." to discard changes in working directory)
-            modified:   tarea1_1.md
+    nothing to commit, working tree clean
 
-    Untracked files:
-    (use "git add <file>..." to include in what will be committed)
-            .gitignore
-            1.txt
+Hecho esto crearemos el tag para ello haremos uso del siguiente comando:
 
-    no changes added to commit (use "git add" and/or "git commit -a")
+    - git tag v0.1
+
+Para verificar que el tag se ha creado correctamente escribiremos:
+
+    - git tag
+
+Si se creo correctamente nos mostrara v0.1 en la lista de etiquetas
+
+---- SUBIR EL TAG v0.1 ----
+
+Para subir el tag podemos hacerlo de dos formas distintas si no hemos realizado otros cambios en el repositorio local escribiremos los siguiente:
+
+    - git push origin v0.1
+
+Si en cambio hemos realizado cambios como en mi caso en el fichero tarea1_1.md escribiremos el siguiente comando:
+
+    - git status (verificamos los cambios que faltan por confirmar)
+    - git add . para añadir todo o git add y el nombre especifico del archivo o carpeta que deseas añadir
+    - git push origin main 
+
+
+
+
 
 
 
