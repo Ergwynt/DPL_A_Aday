@@ -120,15 +120,16 @@ Si en cambio hemos realizado cambios como en mi caso en el fichero tarea1_1.md e
     - git push origin main 
 
 
-       ---------------------------------------------
-       |Nombre|Enlace|
-       ------------------------------------------------------
+       |--------------------------------------------|
+       
+       | Nombre | Enlace|
+       |----------------|-----------------------------------|
        |Samuel Perez|https://github.com/SamuP14/DPL-A-SamuelP|
-       --------------------------------
+       |------------|-----------------|
        |Samuel Sanchez|https://github.com/Shulkioras/DPL_A_SamuelS|
-       ----------------------------------------
+       |--------------|------------------------|
        |David Luis Mora|https://github.com/David-Luis-Mora/DPL_A_David|
-       ---------------------------------------------------------------
+       |---------------|----------------------------------------------|
 
 
 
