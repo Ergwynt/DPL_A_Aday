@@ -105,3 +105,46 @@ Los <> y = marcan las zonas conflictivas por lo que tan solo deberemos editarlo 
         Adios
         
 Dejando tan solo hola y adios
+
+
+BORRAR RAMA
+
+Para crear un tag v0.2 haremos lo siguiente:
+
+    - git tag v0.2 o - git tag -a v0.2 -m "Version del tag v02"
+
+
+Confirmamos que el tag se ha creado correctamente:
+
+    - git tag
+
+Para borrar la rama v0.2 usaremos:
+    - git branch -d v0.2
+
+LISTADO DE CAMBIOS
+
+Para listar los distintos commits con sus ramas y sus tag usaremos:
+
+    - git log --oneline --decorate --all
+
+veremos algo asi:
+
+    0e4ca91 (HEAD -> main, tag: v0.2, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Ergwynt/DPL_A_Aday
+    de9b196 pull del repositorio remoto y add de lo añadido en local
+    bd5ee3f Subida de carpeta xampp
+    77d17bc Conflicto con el merge en 1.txt resuelto
+    e766a89 Añadir 'Adios' en 1.txt en la rama v0.2
+    03dd23a Añadir 'Hola' en 1.txt en la rama master
+    38f5eed (origin/v0.2) Actualizacion de repositorio nueva insercion carpeta de practicas para xampp
+    5eab613 Update tarea1_1.md
+    df2f08b Update tarea1_1.md
+    a77eb1c Update tarea1_1.md
+    f06a572 Actualizacion de fichero tarea1_1.md
+    cf65a27 commit de los ultimos cambios realizados al txt
+    302610f Siguientes cambios realizados actualizacion de tarea1_1.md, 2 nuevos ficheros un .ignore y un 1.txt
+    d763a7f Primer commit
+
+CREAR UNA ORGANIZACIÓN
+
+Para crear una organización nos dirigiremos a github picaremos en la foto de nuestro perfil y buscaremos your organizations y ahi dentro podremos crear una.
+
