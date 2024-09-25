@@ -1,0 +1,61 @@
+1. Cambiar la contraseña del servicio MySQL/MariaDB
+    
+    - Primero, abro el panel de control de XAMPP y aseguro que el servicio MySQL esté en ejecución. Si no está corriendo, lo inicio haciendo clic en Start.
+
+    - Luego, abro phpMyAdmin en el navegador, escribiendo localhost/phpmyadmin.
+
+    - Dentro de phpMyAdmin, voy a la pestaña Cuentas de usuario. Ahí, busco el usuario root (que es el administrador principal).
+
+    -Le doy clic en Editar privilegios al lado de root, y luego selecciono la pestaña Cambiar contraseña.
+
+    -Escribo una nueva contraseña y hago clic en Continuar para guardar los cambios.
+
+2. Actualizar la configuración de XAMPP
+    
+    - Abro la carpeta donde instalé XAMPP, que normalmente está en C:\xampp\phpMyAdmin.
+
+    - Busco el archivo config.inc.php y lo abro con un editor de texto.
+
+    - En el archivo, busco la línea que dice:
+
+
+        - $cfg['Servers'][$i]['password'] = '';
+        - Cambio esa línea, agregando la nueva contraseña que puse para root. Por ejemplo, si la contraseña es nuevaContraseña, quedaría así:
+
+
+        - $cfg['Servers'][$i]['password'] = 'nuevaContraseña';
+        - Guardo el archivo y cierro el editor.
+
+3. Crear un nuevo usuario
+    
+    - Vuelvo a phpMyAdmin, voy otra vez a Cuentas de usuario y hago clic en Añadir cuenta de usuario.
+
+    - Relleno los campos:
+
+        - Nombre de usuario: pongo el nombre que quiero para el nuevo usuario.
+        - Host: selecciono Local.
+        - Contraseña: elijo una contraseña segura y la repito para confirmar.
+        - En la sección de Privilegios globales, marco Marcar todos para darle acceso completo al nuevo usuario.
+
+    - Finalmente, hago clic en Continuar para crear el usuario.
+
+4. Configurar autenticación en phpMyAdmin
+    
+    - Regreso al archivo config.inc.php que abrí antes, y busco la línea que dice:
+
+    - $cfg['Servers'][$i]['auth_type'] = 'config';
+    - Cambio 'config' por 'cookie' para que phpMyAdmin me pida siempre un nombre de usuario y contraseña. Quedaría así:
+
+    - $cfg['Servers'][$i]['auth_type'] = 'cookie';
+    - Guardo los cambios en el archivo.
+
+5. Probar los cambios
+    - Cierro todas las pestañas de phpMyAdmin y vuelvo a abrir localhost/phpmyadmin.
+
+    - Ahora, me pedirá un nombre de usuario y contraseña. Puedo ingresar con el nuevo usuario que creé o con root y su nueva contraseña.
+
+6. Verificación final
+
+    - Entro a phpMyAdmin con el nuevo usuario y verifico que tengo acceso a las bases de datos.
+    
+    - Si todo funciona bien, ya debería pedirme siempre autenticación para acceder a las bases de datos. Si algo falla, reinicio el servicio MySQL desde el panel de XAMPP para asegurarme de que los cambios se aplicaron.
