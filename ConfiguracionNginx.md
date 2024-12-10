@@ -104,20 +104,17 @@ http {
         # ssl_certificate_key /etc/nginx/ssl/empresa3.key;
     }
 }
-```
-
-## Crea y guarda un archivo index.html en /var/www/empresa1/ empresa2 y empresa3 respectivamente:
-    /var/www/empresa1/index.html
-    /var/www/empresa2/index.html
-    /var/www/empresa3/index.html
-    
+``` 
 ## Crea los directorios:
 
     /var/www/empresa1/
     /var/www/empresa2/
     /var/www/empresa3/
-
-## Coloca los archivos HTML en las respectivas carpetas.
+## Crea y guarda un archivo index.html en /var/www/empresa1/ empresa2 y empresa3 respectivamente:
+    /var/www/empresa1/index.html
+    /var/www/empresa2/index.html
+    /var/www/empresa3/index.html
+    Coloca estos archivos HTML en las respectivas carpetas.
 
 # Verifica la configuración de NGINX: Asegúrate de que NGINX esté configurado correctamente, apuntando a los directorios adecuados con las rutas root.
 
