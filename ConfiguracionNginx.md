@@ -119,8 +119,7 @@ http {
 # Verifica la configuración de NGINX: Asegúrate de que NGINX esté configurado correctamente, apuntando a los directorios adecuados con las rutas root.
 
 # Reinicia NGINX para aplicar los cambios:
-
-# sudo systemctl restart nginx
+    nginx -s reload
 
 ## Verifica en el navegador: Accede a cada uno de los sitios de las empresas:
 
