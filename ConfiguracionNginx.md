@@ -105,7 +105,12 @@ http {
     }
 }
 ```
+
 ## Crea y guarda un archivo index.html en /var/www/empresa1/ empresa2 y empresa3 respectivamente:
+    /var/www/empresa1/index.html
+    /var/www/empresa2/index.html
+    /var/www/empresa3/index.html
+    
 ## Crea los directorios:
 
     /var/www/empresa1/
